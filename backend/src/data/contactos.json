@@ -1,0 +1,18 @@
+[
+  {
+    "firstname": "miguel",
+    "lastname": "perez",
+    "email": "miguel@example.com",
+    "phone": "456134",
+    "id": 1,
+    "en_workflow": true
+  },
+  {
+    "firstname": "juan",
+    "lastname": "ramirez",
+    "email": "juan@otro.com",
+    "phone": "546871",
+    "id": 2,
+    "en_workflow": false
+  }
+]

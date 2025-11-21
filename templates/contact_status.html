@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estado de Automatización</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status-box { 
+            padding: 15px; 
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+        .active { 
+            background-color: #e6f7e9; 
+            border: 1px solid #38c172; 
+            color: #1f6438; 
+        }
+        .inactive { 
+            background-color: #fcebeb; 
+            border: 1px solid #e3342f; 
+            color: #a21a20; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estado del Contacto: {{ contact.firstname }} {{ contact.lastname }}</h1>
+    
+    {% if contact.en_workflow %} 
+        <div class="status-box active">
+            <p> **¡Workflow Activo!** Este contacto participa en una automatización activa.</p>
+        </div>
+        <p>Email registrado: {{ contact.email }}</p>
+    {% else %}
+        <div class="status-box inactive">
+            <p> **Workflow Inactivo.** Este contacto aún no está en un flujo automatizado.</p>
+        </div>
+        <p>El contacto no cumplió con las condiciones de activación (ej: no termina en `@example.com`).</p>
+    {% endif %}
+
+    <hr>
+    <p>Simulación de datos adicionales:</p>
+    <ul>
+        <li>ID del Contacto: {{ contact.contactId }}</li>
+        <li>Teléfono: {{ contact.phone }}</li>
+    </ul>
+
+</body>
+</html>

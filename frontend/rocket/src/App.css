@@ -1,0 +1,218 @@
+:root {
+  --primary-color: #008060; 
+  --secondary-color: #f7f9fa; 
+  --text-color: #333;
+  --success-color: #38c172;
+  --danger-color: #e3342f;
+  --border-color: #e0e0e0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--border-color);
+}
+
+header h1 {
+  color: var(--primary-color);
+  font-size: 2.2em;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: var(--primary-color);
+}
+
+/* --- SECCIONES --- */
+
+.form-section, .list-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.form-section h2, .list-section h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--border-color), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* --- ESTILOS DEL FORMULARIO --- */
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: end; 
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 0.95em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box; 
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.submit-button {
+    grid-column: span 1; 
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    height: 42px; 
+}
+
+.submit-button:hover {
+    background-color: #00664c; 
+}
+
+.server-message.error {
+    color: var(--danger-color);
+    margin-top: 15px;
+    grid-column: 1 / -1;
+    font-weight: bold;
+}
+.server-message.success {
+    color: var(--success-color);
+    margin-top: 15px;
+    grid-column: 1 / -1;
+    font-weight: bold;
+}
+
+/* --- ESTILOS DE LA LISTA --- */
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.contact-table th, .contact-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.contact-table th {
+    background-color: #f0f3f6;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact-table tbody tr:nth-child(even) {
+    background-color: #fafafa; /
+}
+
+.contact-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* --- ESTILOS DE ESTADO (en_workflow) --- */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-active {
+    background-color: #e6f7e9; 
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.status-inactive {
+    background-color: #fcebeb; 
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+}
+
+/* --- MEDIAS QUERIES  --- */
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+    }
+
+    .form-section, .list-section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    
+    .contact-table {
+        display: block;
+        overflow-x: auto; 
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form {
+        grid-template-columns: 1fr; 
+    }
+    
+    .submit-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
