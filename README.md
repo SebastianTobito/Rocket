@@ -1,4 +1,4 @@
-# 🚀 Prueba Técnica: Contact Sync Dashboard (HubSpot API Simulation)
+# 🚀 Rocket: Contact Sync Dashboard (HubSpot API Simulation)
 
 Este proyecto implementa una solución full-stack que simula la interacción con la API de Contactos de HubSpot. Incluye una **API mock en Node.js/Express** para manejar la lógica del negocio y un **Frontend en React/Vite** para la visualización y gestión de los contactos.
 
