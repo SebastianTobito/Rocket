@@ -6,9 +6,12 @@ Este proyecto implementa una solución full-stack que simula la interacción con
 
 ## 🏗️ Estructura del Proyecto
 
-El backend fue refactorizado para seguir una arquitectura modular, separando la lógica de la configuración y asegurando la persistencia de datos:
-
-/prueba_rocket_contacto (Carpeta Raíz del Proyecto) ├── README.md │ ├── /frontend │ └── ... (Código React y Componentes) │ └── /backend ├── /src├── /data │ └── contactos.json  ├── /routes │ └── contactRoutes.js  (GET, POST, Persistencia) ├── app.js  ├── index.js (Arranque del servidor) └── contact_status.html 
+/rocket(Carpeta Raíz del Proyecto) 
+├── /frontend │ └── ... (Código React y Componentes) │
+├── /backend └── /src └── /data │ └── contactos.json │ 
+                      └── /routes │ └── contactRoutes.js  ├── app.js  ├── index.js (Arranque del servidor) │
+├── /templates  ├── contact_status.html │
+├── README.md │
 
 ## 🛠️ Requisitos e Instalación
 
@@ -45,3 +48,5 @@ npm install
 
 # 3. Iniciar la aplicación
 npm run dev
+
+[screen-capture.webm](https://github.com/user-attachments/assets/887dc5d3-4d70-4c40-ba1e-a3043227b41f)
